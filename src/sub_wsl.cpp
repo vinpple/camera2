@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
     signal(SIGINT, ctrlc_handler);
 
     // VideoWriter 객체 초기화
-    writer.open("output.mp4", cv::VideoWriter::fourcc('M', 'P', '4', 'V'), 30, cv::Size(640, 360));
+    writer.open("output.avi", cv::VideoWriter::fourcc('X', 'V', 'I', 'D'), 30, cv::Size(640, 360));
     if (!writer.isOpened()) {
         RCLCPP_ERROR(node->get_logger(), "Could not open the output video file for write");
         rclcpp::shutdown();
